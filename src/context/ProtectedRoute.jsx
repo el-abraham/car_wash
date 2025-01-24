@@ -9,8 +9,7 @@ export default function ProtectedRoute({ children, roles }) {
     return <Navigate to="/login" />;
   }
 
-  console.log(roles)
-  if (!roles.include(role)) {
+  if (roles[0] == role) {
     return <Navigate to="/unauthorized" />;
   }
 
