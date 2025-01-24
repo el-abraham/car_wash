@@ -1,8 +1,33 @@
-# React + Vite
+# Front-End Booking & Admin Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Fitur
 
-Currently, two official plugins are available:
+### Untuk Pengguna  
+1. **Login** (`/login`)  
+   Pengguna dapat masuk dengan kredensial mereka.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Register** (`/register`)  
+   Pengguna baru dapat mendaftar untuk mengakses aplikasi.  
+
+3. **Dashboard Booking Paket** (`/dashboard`)  
+   Pengguna dapat melihat dan memesan paket yang tersedia.  
+
+4. **Pesanan Saya** (`/pesanan`)  
+   Pengguna dapat melihat daftar pesanan yang telah dibuat.  
+
+### Untuk Admin  
+1. **Dashboard Admin** (`/admin`)  
+   Admin dapat melihat daftar semua pengguna yang terdaftar.  
+
+2. **Manajemen Pesanan** (`/pesanan`)  
+   Admin dapat melihat dan mengelola semua pesanan yang masuk.  
+
+3. **Manajemen Paket** (`/paket`)  
+   Admin dapat menambah, membaca, memperbarui, dan menghapus paket.
+
+## Cara Menjalankan :
+1. **Clone repositori**  
+   Jalankan perintah berikut untuk menyalin repositori ke komputer Anda:  
+   ```bash
+   git clone <URL-repo-Anda>
+   cd <nama-folder-proyek>
