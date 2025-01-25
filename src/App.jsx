@@ -8,7 +8,7 @@ import AdminLayout from "./layout/adminLayout";
 import UserAdmin from "./pages/userAdmin";
 import PesananAdmin from "./pages/pesananAdmin";
 import PaketAdmin from "./pages/paketAdmin";
-import ProtectedRoute from "./context/protectedRoute";
+import ProtectedRoute from "./context/ProtectedRoute";
 import Unauthorized from "./pages/unauthorized";
 
 function App() {
