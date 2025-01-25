@@ -11,13 +11,13 @@ export default function ContextProvider({ children }) {
     const storedRole = localStorage.getItem("roleId");
     const storedAuth = localStorage.getItem("auth");
 
-    if (storedAuth && storedAuth) {
+    if (storedRole !== null) {
       setAuth(storedAuth);
       setRole(storedRole);
     }
   }, []);
 
-  const Login = (role, auth, token) => {
+  const Login = (role, auth) => {
     setAuth(auth);
     setRole(role);
   };

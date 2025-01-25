@@ -1,6 +1,6 @@
 import axios from "axios";
 const url = import.meta.env.VITE_URL;
-const bearerToken = localStorage.getItem("token") || "";
+const bearerToken = localStorage.getItem("token");
 
 export const getDataPackage = async () => {
   try {
