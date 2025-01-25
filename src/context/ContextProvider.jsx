@@ -4,11 +4,26 @@ import { createContext } from "react";
 export const RoleContext = createContext();
 
 export default function ContextProvider({ children }) {
-  const role = localStorage.getItem("roleId")
-  const auth = localStorage.getItem("auth") === "true";
-  
+  const [role, setRole] = useState(null);
+  const [auth, setAuth] = useState(false);
+
+  useEffect(() => {
+    const storedRole = localStorage.getItem("roleId");
+    const storedAuth = localStorage.getItem("auth");
+
+    if (storedAuth && storedAuth) {
+      setAuth(storedAuth);
+      setRole(storedRole);
+    }
+  }, []);
+
+  const Login = (role, auth, token) => {
+    setAuth(auth);
+    setRole(role);
+  };
+
   return (
-    <RoleContext.Provider value={{ role , auth }}>
+    <RoleContext.Provider value={{ role, auth, Login }}>
       {children}
     </RoleContext.Provider>
   );

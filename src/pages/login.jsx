@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router";
 import { login } from "../api/authApi";
 import { useNavigate } from "react-router";
+import { RoleContext } from "../context/ContextProvider";
 
 export default function Login() {
   const navigate = useNavigate();
+  const { Login } = useContext(RoleContext);
+
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -28,6 +31,8 @@ export default function Login() {
       localStorage.setItem("userId", req.data.id);
       localStorage.setItem("roleId", req.data.role);
       localStorage.setItem("auth", true);
+
+      Login(req.data.role, true);
 
       if (req.data.role == 1) {
         navigate("/");
